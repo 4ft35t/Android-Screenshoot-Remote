@@ -26,8 +26,10 @@ screenshoot(){
      sleep 3
      while true
      do
-         # 校验文件大小，避免 pull 回来未写完图片
-         adb pull $img /tmp/ysf.png && [ "$(stat -c %s /tmp/ysf.png)" -ge 300000 ] && break
+         # 等文件写完再 pull
+         modify_time=$(adb shell stat -c %Y $img)
+         now=$(date +%s)
+         [[ "$modify_time" && "$modify_time" -lt "$now" ]] && adb pull $img /tmp/ysf.png && break
          sleep 1
      done
 
