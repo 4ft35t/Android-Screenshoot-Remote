@@ -4,7 +4,8 @@ demo for remote screenshoot on Android, build from autojs + cgi + adb
 more info at [blog](https://4ft35t.github.io/post/post/android-screenshoot-remote/)
 
 ---
-使用 autojs + cgi + adb 实现的安卓远程截图
+使用 autojs + cgi + adb 实现的安卓远程截图。
+
 更多信息见[blog](https://4ft35t.github.io/post/post/android-screenshoot-remote/)
 
 ## 使用方法
